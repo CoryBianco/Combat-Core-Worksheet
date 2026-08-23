@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CombatCore.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64d4fc444a7274f9070aa57cb95deb3574e256aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CombatCore.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CombatCore.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

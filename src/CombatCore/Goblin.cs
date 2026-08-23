@@ -1,6 +1,6 @@
 ﻿namespace CombatCore
 {
-    public class Goblin : Unit
+    public class Goblin
     {
         
     }
