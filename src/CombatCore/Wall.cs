@@ -1,38 +1,49 @@
 ﻿using System;
+using System.Data;
+using System.IO;
 
 namespace CombatCore
 {
     public class Wall : IDamageable
     {
-        private float health;
-        private float armor;
-        private float fireResistance; // fire resistance must be > 1
-        private bool isAlive = true;
+        private float _health;
+        private float _armor;
+        private float _percentFireResistance;
+        private bool _isAlive;
 
-        public Wall(float startingHealth, float armor, float fireResistance)
+        public bool IsAlive()
         {
-            this.health = startingHealth;
-            this.armor = armor;
-            this.fireResistance = fireResistance;
-            isAlive = true;
+            return this._isAlive;
+        }
+
+        public Wall(float startingHealth, float armor, float percentFireResistance)
+        {
+            if (percentFireResistance > 1 || percentFireResistance < 0)
+            {
+                throw new SyntaxErrorException("percentFireResistance must be between 0 and 1.");
+            }
+            this._health = startingHealth;
+            this._armor = armor;
+            this._percentFireResistance = percentFireResistance;
+            this._isAlive = true;
         }
 
         public void TakeDamage(float amount, DamageType type, string source)
         {
-            if (!isAlive) return;
+            if (!this._isAlive) return;
             var calcedDamage = 0f;
 
             if (type == DamageType.Fire)
             {
-                calcedDamage = amount * (1 - (1 / fireResistance));
+                calcedDamage = amount * this._percentFireResistance;
             } else if (type == DamageType.Sword)
             {
-                calcedDamage = Math.Max(0, amount - armor);
+                calcedDamage = Math.Max(0, amount - this._armor);
             }
 
-            this.health -= calcedDamage;
+            this._health -= calcedDamage;
 
-            if (health <= 0)
+            if (this._health <= 0)
             {
                 Die();
             }
@@ -41,9 +52,9 @@ namespace CombatCore
 
         private void Die()
         {
-            if (isAlive)
+            if (this._isAlive)
             {
-                isAlive = false;
+                this._isAlive = false;
             }
         }
     }

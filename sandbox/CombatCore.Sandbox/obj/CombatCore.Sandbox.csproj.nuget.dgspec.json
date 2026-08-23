@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "net9.0": {
-            "framework": "net9.0",
             "targetAlias": "net9.0",
             "projectReferences": {
               "B:\\Unity\\combat-core\\src\\CombatCore\\CombatCore.csproj": {
@@ -47,7 +46,6 @@
       },
       "frameworks": {
         "net9.0": {
-          "framework": "net9.0",
           "targetAlias": "net9.0",
           "imports": [
             "net461",
@@ -89,7 +87,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "framework": "netstandard2.1",
             "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
@@ -109,7 +106,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "framework": "netstandard2.1",
           "targetAlias": "netstandard2.1",
           "imports": [
             "net461",

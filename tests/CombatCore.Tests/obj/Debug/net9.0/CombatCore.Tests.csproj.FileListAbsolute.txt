@@ -100,3 +100,4 @@ B:\Unity\combat-core\tests\CombatCore.Tests\obj\Debug\net9.0\refint\CombatCore.T
 B:\Unity\combat-core\tests\CombatCore.Tests\obj\Debug\net9.0\CombatCore.Tests.pdb
 B:\Unity\combat-core\tests\CombatCore.Tests\obj\Debug\net9.0\CombatCore.Tests.genruntimeconfig.cache
 B:\Unity\combat-core\tests\CombatCore.Tests\obj\Debug\net9.0\ref\CombatCore.Tests.dll
+B:\Unity\combat-core\tests\CombatCore.Tests\obj\Debug\net9.0\CombatCore.Tests.sourcelink.json

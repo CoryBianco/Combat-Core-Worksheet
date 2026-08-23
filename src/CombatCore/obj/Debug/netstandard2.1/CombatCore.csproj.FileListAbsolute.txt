@@ -7,3 +7,4 @@ B:\Unity\combat-core\src\CombatCore\bin\Debug\netstandard2.1\CombatCore.dll
 B:\Unity\combat-core\src\CombatCore\bin\Debug\netstandard2.1\CombatCore.pdb
 B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.dll
 B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.pdb
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.sourcelink.json
