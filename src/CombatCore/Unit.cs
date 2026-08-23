@@ -2,13 +2,6 @@
 
 namespace CombatCore
 {
-
-    public enum DamageType
-    {
-        Fire,
-        Sword
-    }
-
     public class Unit
     {
         private float health;
