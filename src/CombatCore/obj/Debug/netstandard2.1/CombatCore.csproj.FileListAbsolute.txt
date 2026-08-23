@@ -1,0 +1,9 @@
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.GeneratedMSBuildEditorConfig.editorconfig
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.AssemblyInfoInputs.cache
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.AssemblyInfo.cs
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.csproj.CoreCompileInputs.cache
+B:\Unity\combat-core\src\CombatCore\bin\Debug\netstandard2.1\CombatCore.deps.json
+B:\Unity\combat-core\src\CombatCore\bin\Debug\netstandard2.1\CombatCore.dll
+B:\Unity\combat-core\src\CombatCore\bin\Debug\netstandard2.1\CombatCore.pdb
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.dll
+B:\Unity\combat-core\src\CombatCore\obj\Debug\netstandard2.1\CombatCore.pdb
