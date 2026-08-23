@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CombatCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c34bcf6cbbddcf1fbb1bf973e438aebb752da4d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CombatCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CombatCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
