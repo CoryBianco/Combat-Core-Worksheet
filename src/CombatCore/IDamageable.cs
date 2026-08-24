@@ -1,8 +1,15 @@
 ﻿namespace CombatCore
 {
-    interface IDamageable
+    public readonly struct DamageInfo
     {
-        float health { get; }
-        public void TakeDamage(float amount, DamageType type, string source); // Not really sure how to type the source.
+        public float Amount { get; init; }
+        public DamageType Type { get; init; }
+        public string Source { get; init; }
+    }
+    public interface IDamageable
+    {
+        float Health { get; }
+        public bool IsAlive { get; }
+        public void TakeDamage(DamageInfo damage);
     }
 }

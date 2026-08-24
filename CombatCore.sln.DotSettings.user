@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6cedf556_002Dbe0f_002D471b_002D90bc_002D168183d1fe88/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TakeDamage_WhenDamageExactlyEqualsHealth_Kills" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::4EDDB4A8-6618-49D0-9272-636BF334E99C::net9.0::CombatCore.Tests.WallTest.TakeDamage_WhenDamageExactlyEqualsHealth_Kills&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

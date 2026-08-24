@@ -16,3 +16,4 @@ B:\Unity\combat-core\sandbox\CombatCore.Sandbox\obj\Debug\net9.0\refint\CombatCo
 B:\Unity\combat-core\sandbox\CombatCore.Sandbox\obj\Debug\net9.0\CombatCore.Sandbox.pdb
 B:\Unity\combat-core\sandbox\CombatCore.Sandbox\obj\Debug\net9.0\CombatCore.Sandbox.genruntimeconfig.cache
 B:\Unity\combat-core\sandbox\CombatCore.Sandbox\obj\Debug\net9.0\ref\CombatCore.Sandbox.dll
+B:\Unity\combat-core\sandbox\CombatCore.Sandbox\obj\Debug\net9.0\CombatCore.Sandbox.sourcelink.json

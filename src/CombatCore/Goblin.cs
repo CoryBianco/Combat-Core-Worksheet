@@ -1,29 +1,27 @@
 ﻿namespace CombatCore
 {
-    public class Goblin: IDamageable
+    public class Goblin: Damageable
     {
-        private float _attackStat;
-        public float health { get; set; }
-        public float armor { get; set; }
-        public float perfecntFireResistance { get; set; }
-        public bool isAlive { get; set; }
+        public float SwordAttackStat { get; private set; }
+        public float FireAttackStat { get; private set; }
 
-        public Goblin(float baseAttack, float baseHealth, float baseArmor, float  basePerfecntFireResistance )
+        public Goblin(float baseSwordAttack, float baseFireAttack, float baseHealth, float baseArmor, float  basePercentFireResistance ) : base(baseHealth, baseArmor, basePercentFireResistance)
         {
-            _attackStat = baseAttack;
-            health = baseHealth;
-            armor = baseArmor;
-            perfecntFireResistance = basePerfecntFireResistance;
-            isAlive = true;
-        }
-        public float Attack()
-        {
-            return _attackStat;
+            SwordAttackStat = baseSwordAttack;
+            FireAttackStat = baseFireAttack;
         }
 
-        public void TakeDamage(float amount, DamageType type, string source)
+        public float Attack(DamageType damageType)
         {
-            // goblin is never attacked so it takes no damage ever
+            if (damageType == DamageType.Sword)
+            {
+                return SwordAttackStat;
+            } else if (damageType == DamageType.Fire)
+            {
+                return FireAttackStat;
+            }
+
+            return 0;
         }
     }
 }
