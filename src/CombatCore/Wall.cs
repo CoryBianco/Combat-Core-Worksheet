@@ -6,7 +6,7 @@ namespace CombatCore
 {
     public class Wall : IDamageable
     {
-        private float _health;
+        public float health { get; set; }
         private float _armor;
         private float _percentFireResistance;
         private bool _isAlive;
@@ -22,7 +22,7 @@ namespace CombatCore
             {
                 throw new SyntaxErrorException("percentFireResistance must be between 0 and 1.");
             }
-            this._health = startingHealth;
+            this.health = startingHealth;
             this._armor = armor;
             this._percentFireResistance = percentFireResistance;
             this._isAlive = true;
@@ -35,15 +35,15 @@ namespace CombatCore
 
             if (type == DamageType.Fire)
             {
-                calcedDamage = amount * this._percentFireResistance;
+                calcedDamage = amount * (1 - this._percentFireResistance);
             } else if (type == DamageType.Sword)
             {
                 calcedDamage = Math.Max(0, amount - this._armor);
             }
 
-            this._health -= calcedDamage;
+            this.health -= calcedDamage;
 
-            if (this._health <= 0)
+            if (this.health <= 0)
             {
                 Die();
             }

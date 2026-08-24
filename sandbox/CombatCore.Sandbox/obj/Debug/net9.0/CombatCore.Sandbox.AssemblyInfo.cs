@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CombatCore.Sandbox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e69c876cacfbeea6b8f363341710e8d9fa3373db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cf7ad22f64d314348f5b0c5a1b0742b225eb5bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CombatCore.Sandbox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CombatCore.Sandbox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
