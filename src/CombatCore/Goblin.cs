@@ -1,6 +1,6 @@
 ﻿namespace CombatCore
 {
-    public class Goblin: Damageable
+    public sealed class Goblin: Damageable
     {
         public float SwordAttackStat { get; private set; }
         public float FireAttackStat { get; private set; }

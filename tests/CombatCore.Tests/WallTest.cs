@@ -2,6 +2,12 @@
 
 public class WallTest
 {
+    
+    [Fact]
+    public void Wall_MustHaveValidFireResistance()
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => new Wall(5f, 0f, -1f));
+    }
     [Fact]
     public void TakeDamage_WhenDamageExceedsHealth_Kills()
     {
