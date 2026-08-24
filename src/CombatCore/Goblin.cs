@@ -21,7 +21,7 @@
                 return FireAttackStat;
             }
 
-            return 0;
+            return 0f;
         }
     }
 }

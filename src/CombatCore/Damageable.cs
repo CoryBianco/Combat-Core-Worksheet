@@ -2,7 +2,7 @@
 
 namespace CombatCore
 {
-    public class Damageable: IDamageable
+    public abstract class Damageable: IDamageable
     {
         public float Health { get; private set; }
         public float Armor { get; private set; }
@@ -11,6 +11,10 @@ namespace CombatCore
 
         public Damageable(float baseHealth, float baseArmor, float basePercentFireResistance)
         {
+            if (basePercentFireResistance > 1 || basePercentFireResistance < 0)
+            {
+                throw new ArgumentOutOfRangeException("basePercentFireResistance");
+            }
             Health = baseHealth;
             Armor = baseArmor;
             PercentFireResistance = basePercentFireResistance;
@@ -19,14 +23,22 @@ namespace CombatCore
 
         public void TakeDamage(DamageInfo damage)
         {
-            if (damage.Type == DamageType.Fire)
+            // If Damageable is not alive do not let it take more damage.
+            if (!IsAlive)
             {
-                Health -= damage.Amount * (1 - PercentFireResistance);
-                return;
-            } else if (damage.Type == DamageType.Sword)
+                return; 
+            }
+
+            switch (damage.Type)
             {
-                Health -= Math.Max(0, damage.Amount - Armor);
-                return;
+                case DamageType.Fire:
+                    Health -= damage.Amount * (1 - PercentFireResistance);
+                    break;
+                case DamageType.Sword:
+                    Health -= Math.Max(0, damage.Amount - Armor);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
     }

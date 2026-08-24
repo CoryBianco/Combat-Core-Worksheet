@@ -53,4 +53,22 @@ public class WallTest
         
         Assert.Equal(15f, wall.Health, 3);
     }
+    
+    [Fact]
+    public void TakeDamage_ArmorExists()
+    {
+        var wall = new Wall(20f, 5f, .5f);
+        wall.TakeDamage(new DamageInfo { Amount = 10f, Type = DamageType.Sword, Source = "something" });
+        
+        Assert.Equal(15f, wall.Health, 3);
+    }
+    
+    [Fact]
+    public void TakeDamage_ArmorFullyBlocks()
+    {
+        var wall = new Wall(20f, 10f, .5f);
+        wall.TakeDamage(new DamageInfo { Amount = 10f, Type = DamageType.Sword, Source = "something" });
+        
+        Assert.Equal(20f, wall.Health, 3);
+    }
 }
