@@ -50,7 +50,15 @@ namespace CombatCore
 
             foreach (var handler in typeHandlers.ToArray())
             {
-                ((Action<T>)handler)(@event);
+                try
+                {
+                    ((Action<T>)handler)(@event);
+                } catch (Exception e)
+                {
+                    // Just going to catch the exception and let the rest of the subscribers fire.
+                    Console.WriteLine(e);
+                }
+
             }
         }
     }

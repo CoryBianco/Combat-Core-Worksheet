@@ -21,12 +21,12 @@ namespace CombatCore
         }
         
 
-        public void TakeDamage(DamageInfo damage)
+        public float TakeDamage(DamageInfo damage)
         {
             // If Damageable is not alive do not let it take more damage.
             if (!IsAlive)
             {
-                return;
+                return 0f;
             }
 
             var mitigated = damage.Type switch
@@ -37,6 +37,8 @@ namespace CombatCore
             };
 
             Health -= Math.Max(0, mitigated);
+
+            return Math.Max(0f, mitigated);
         }
     }
 }

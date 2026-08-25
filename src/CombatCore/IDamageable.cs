@@ -10,6 +10,6 @@
     {
         float Health { get; }
         public bool IsAlive { get; }
-        public void TakeDamage(DamageInfo damage);
+        public float TakeDamage(DamageInfo damage);
     }
 }
