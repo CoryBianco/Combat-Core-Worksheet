@@ -71,4 +71,13 @@ public class WallTest
         
         Assert.Equal(20f, wall.Health, 3);
     }
+    
+    [Fact]
+    public void TakeDamage_NoDamageDealtToDeadCreature()
+    {
+        var wall = new Wall(0f, 10f, .5f);
+        wall.TakeDamage(new DamageInfo { Amount = 10f, Type = DamageType.Sword, Source = "something" });
+        
+        Assert.Equal(0f, wall.Health, 3);
+    }
 }

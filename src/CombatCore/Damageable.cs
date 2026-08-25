@@ -13,7 +13,7 @@ namespace CombatCore
         {
             if (basePercentFireResistance > 1 || basePercentFireResistance < 0)
             {
-                throw new ArgumentOutOfRangeException("basePercentFireResistance");
+                throw new ArgumentOutOfRangeException(nameof(basePercentFireResistance));
             }
             Health = baseHealth;
             Armor = baseArmor;
@@ -26,20 +26,17 @@ namespace CombatCore
             // If Damageable is not alive do not let it take more damage.
             if (!IsAlive)
             {
-                return; 
+                return;
             }
 
-            switch (damage.Type)
+            var mitigated = damage.Type switch
             {
-                case DamageType.Fire:
-                    Health -= damage.Amount * (1 - PercentFireResistance);
-                    break;
-                case DamageType.Sword:
-                    Health -= Math.Max(0, damage.Amount - Armor);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+                DamageType.Fire => damage.Amount * (1 - PercentFireResistance),
+                DamageType.Sword => Math.Max(0, damage.Amount - Armor),
+                _ => throw new ArgumentOutOfRangeException(nameof(damage.Type))
+            };
+
+            Health -= Math.Max(0, mitigated);
         }
     }
 }

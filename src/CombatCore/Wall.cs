@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CombatCore
+﻿namespace CombatCore
 {
     public sealed class Wall : Damageable
     {

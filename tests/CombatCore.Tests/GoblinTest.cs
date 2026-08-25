@@ -30,11 +30,11 @@
         [Fact]
         public void TakeDamage_WhenDamageExceedsHealth_Kills()
         {
-            var wall = new Goblin(0f, 0f, 5f, 0f, .05f);
+            var goblin = new Goblin(0f, 0f, 5f, 0f, .05f);
 
-            wall.TakeDamage(new DamageInfo { Amount = 10f, Type = DamageType.Sword, Source = "something" });
+            goblin.TakeDamage(new DamageInfo { Amount = 10f, Type = DamageType.Sword, Source = "something" });
 
-            Assert.False(wall.IsAlive);
+            Assert.False(goblin.IsAlive);
         }
     }
 }
